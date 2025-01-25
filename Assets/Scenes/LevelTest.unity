@@ -593,6 +593,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4162239575324076383, guid: afc09dbb32473584a95467d7f2b2bd8d, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162239575324076383, guid: afc09dbb32473584a95467d7f2b2bd8d, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162239575324076383, guid: afc09dbb32473584a95467d7f2b2bd8d, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -4000089397774515349, guid: 39877754fea3f9b449ee478fc6ae7b00, type: 3}
