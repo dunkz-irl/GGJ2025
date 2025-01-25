@@ -47,10 +47,19 @@ public class Player : MonoBehaviour
         float arrowDistance = transform.localScale.x/2 + 0.3f;
         arrowDrawer.DrawArrow(angle, arrowDistance);
 
+        HandleInput();
+    }
+
+    private void HandleInput()
+    {
         // Check if the action key is pressed
         if (Input.GetKeyDown(actionKey))
         {
             SetSpeedInDirection(angle);
+        }
+        if (Input.GetKeyDown("p"))
+        {
+            shrink(1);
         }
     }
 
@@ -77,6 +86,15 @@ public class Player : MonoBehaviour
 
         // Set the Rigidbody2D velocity in the calculated direction
         rb.linearVelocity = direction * impulseMagnitude;
+    }
+
+    // allow others to shrink this players bubble by specified amount
+    public void shrink (float amount) 
+    {
+        // make player grow
+        size -= growRate * amount;
+        // make player float
+        rb.gravityScale += floatRate * amount;
     }
 }
 
