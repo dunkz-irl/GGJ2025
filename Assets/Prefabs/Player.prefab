@@ -105,10 +105,71 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionKey: space
   spinRate: 100
-  growRate: 0.1
+  growRate: 0.2
   floatRate: 0.001
-  impulseMagnitude: 2
   startingGravityScale: 0.001
+  impulseMagnitude: 2
+  chargeIncrement: 1
+  sizeChargeCoeff: 0.5
+  sizeChargeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 2
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spinChargeCoeff: 125
+  spinChargeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1.75
+      inSlope: -1.4634147
+      outSlope: -1.4634147
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5125
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  impulseChargeCoeff: 1.5
 --- !u!114 &4844972531581820080
 MonoBehaviour:
   m_ObjectHideFlags: 0
