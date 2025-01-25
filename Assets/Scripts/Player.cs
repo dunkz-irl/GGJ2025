@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -32,6 +33,10 @@ public class Player : MonoBehaviour
 
     private float spinRateCharge = 0f;
     private float impulseMagnitudeCharge = 0f;
+    
+    [SerializeField]
+    private float invulnTimeAfterDamage = 1f;
+    bool isDamaged = false;
 
     private bool isCharging = false;
     private float angle = 0;  
@@ -40,6 +45,9 @@ public class Player : MonoBehaviour
 
     private ArrowDrawer arrowDrawer;
     private Rigidbody2D rb;
+
+    [SerializeField]
+    Animation spriteAnimation;
 
     [SerializeField]
     private Color playerColor = Color.white;
@@ -51,7 +59,7 @@ public class Player : MonoBehaviour
         arrowDrawer = GetComponent<ArrowDrawer>();
         rb = GetComponent<Rigidbody2D>();  
 
-        rb.gravityScale = startingGravityScale;      
+        rb.gravityScale = startingGravityScale;
     }
 
     // Update is called once per frame
@@ -74,6 +82,8 @@ public class Player : MonoBehaviour
         arrowDrawer.DrawArrow(angle, arrowDistance);
 
         HandleInput();
+
+        // Counter rotate child sprite renderer
     }
 
     private void HandleInput()
@@ -89,7 +99,7 @@ public class Player : MonoBehaviour
             {
                 chargeTime += Time.deltaTime;
 
-                size -= chargeIncrement * Time.deltaTime * sizeChargeCoeff * sizeChargeCurve.Evaluate(chargeTime);
+                size -= chargeIncrement * Time.deltaTime * sizeChargeCoeff * size * sizeChargeCurve.Evaluate(chargeTime);
                 size = Mathf.Max(size, 1f); // size shouldn't go below 1
 
                 if (size > 1)
@@ -117,7 +127,8 @@ public class Player : MonoBehaviour
         //}
         if (Input.GetKeyDown("p"))
         {
-            shrink(1);
+            //shrink(1);
+            Damage();
         }
     }
 
@@ -151,8 +162,39 @@ public class Player : MonoBehaviour
     {
         // make player grow
         size -= growRate * amount;
+
+        // Don't go below 1
+        size = Mathf.Max(size, 1f);
+        
         // make player float
         rb.gravityScale += floatRate * amount;
+    }
+
+    public void Damage()
+    {
+        if (isDamaged)
+        {
+            return;
+        }
+
+        isDamaged = true;
+        shrink(5f);
+
+        // Change arrow spinning direction
+        spinRate *= -1f;
+
+        spriteAnimation.Play("A_SpriteDamageWiggle");
+        spriteAnimation.PlayQueued("A_SpriteFlash");
+
+        StartCoroutine("ResetDamage");
+    }
+
+    IEnumerator ResetDamage()
+    {
+        yield return new WaitForSeconds(invulnTimeAfterDamage);
+
+        isDamaged = false;
+        spriteAnimation.Stop("A_SpriteFlash");
     }
 }
 

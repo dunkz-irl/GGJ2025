@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6553071235375410952}
   - component: {fileID: 1770363165116691723}
+  - component: {fileID: 8472636760199663612}
+  - component: {fileID: 853372266206492633}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -87,6 +89,42 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!111 &8472636760199663612
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2973180315084621202}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 4f4c20ff5221c4c41ba3dc17c9148452, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 4f4c20ff5221c4c41ba3dc17c9148452, type: 2}
+  - {fileID: 7400000, guid: 56117721d4323494bbd22cd997dc1271, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
+--- !u!1818360609 &853372266206492633
+RotationConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2973180315084621202}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Weight: 1
+  m_RotationAtRest: {x: 0, y: 0, z: 0}
+  m_RotationOffset: {x: 0, y: 0, z: 0}
+  m_AffectRotationX: 1
+  m_AffectRotationY: 1
+  m_AffectRotationZ: 1
+  m_Active: 1
+  m_IsLocked: 0
+  m_Sources: []
 --- !u!1 &6654857545901294676
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,7 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionKey: space
   spinRate: 100
-  growRate: 0.2
+  growRate: 0.5
   floatRate: 0.001
   startingGravityScale: 0.001
   impulseMagnitude: 2
@@ -156,8 +194,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 1
-      value: 2
+      time: 1.5
+      value: 3
       inSlope: 2
       outSlope: 2
       tangentMode: 0
@@ -167,7 +205,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  spinChargeCoeff: 125
+  spinChargeCoeff: 150
   spinChargeCurve:
     serializedVersion: 2
     m_Curve:
@@ -201,7 +239,10 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  impulseChargeCoeff: 1.5
+  impulseChargeCoeff: 4
+  invulnTimeAfterDamage: 1
+  spriteAnimation: {fileID: 8472636760199663612}
+  playerColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &4844972531581820080
 MonoBehaviour:
   m_ObjectHideFlags: 0
