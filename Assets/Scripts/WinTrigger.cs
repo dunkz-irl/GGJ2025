@@ -8,7 +8,10 @@ public class WinTrigger : MonoBehaviour
     {
         if (GameManager.Instance.currentGameState == GameManager.GameState.Running)
         {
-            GameManager.Instance.PlayerWon(collision.gameObject);
+            if (collision.GetComponent<Player>())
+            {
+                GameManager.Instance.PlayerWon(collision.gameObject);
+            }
         }
     }
 }
