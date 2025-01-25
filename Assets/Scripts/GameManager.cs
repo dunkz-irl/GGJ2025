@@ -5,10 +5,11 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     public static UnityEngine.Events.UnityAction<GameState> gameStateChanged;
+    public static UnityEngine.Events.UnityAction<GameObject> playerWon;
 
     public enum GameState
     {
-        Pregame,
+        //Pregame,
         Running,
         Paused,
         Postgame
@@ -42,7 +43,13 @@ public class GameManager : Singleton<GameManager>
 
     public void ReturnToMainMenu()
     {
-        ChangeGameState(GameState.Pregame);
+        //ChangeGameState(GameState.Pregame);
         LoadScene("MainMenu");
+    }
+
+    public void PlayerWon(GameObject player)
+    {
+        ChangeGameState(GameState.Postgame);
+        playerWon?.Invoke(player);
     }
 }

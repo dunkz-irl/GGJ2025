@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIManager : Singleton<UIManager>
 {
@@ -10,12 +11,12 @@ public class UIManager : Singleton<UIManager>
     private GameObject backgroundPanel;
     private GameObject pauseMenu;
     private GameObject optionsMenu;
+    private GameObject gameOverMenu;
     private GameManager gameManager;
 
     public enum MyButton
     {
         play,
-        leaderboard,
         options,
         quit,
         pause,
@@ -24,16 +25,25 @@ public class UIManager : Singleton<UIManager>
         back,
         restart,
         mute,
-        signIn,
-        signOut,
-        signOutConfirm,
-        signOutDeny,
+    }
+
+    protected override void Awake()
+    {
+        base.Awake();
+        DontDestroyOnLoad(gameObject);
     }
 
     private void OnEnable()
     {
         GameManager.gameStateChanged += OnGameStateChanged;
         SceneManager.sceneLoaded += OnSceneChanged;
+        GameManager.playerWon += PlayerWon;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.gameStateChanged -= OnGameStateChanged;
+        SceneManager.sceneLoaded -= OnSceneChanged;
     }
 
     private void Start()
@@ -41,6 +51,7 @@ public class UIManager : Singleton<UIManager>
         //backgroundPanel = transform.Find("Canvas/BackgroundPanel").gameObject;
         //pauseMenu = transform.Find("Canvas/SafeAreaPanel/PauseMenu").gameObject;
         //optionsMenu = transform.Find("Canvas/SafeAreaPanel/OptionsMenu").gameObject;
+        gameOverMenu = transform.Find("Canvas/GameOverMenu").gameObject;
         gameManager = GameManager.Instance;
     }
 
@@ -77,12 +88,16 @@ public class UIManager : Singleton<UIManager>
             case MyButton.play:
                 StartCoroutine(gameManager.StartGame());
                 break;
+            case MyButton.restart:
+                gameOverMenu.SetActive(false);
+                StartCoroutine(gameManager.StartGame());
+                break;
         }
     }
 
-    private void OnDisable()
+    void PlayerWon(GameObject player)
     {
-        GameManager.gameStateChanged -= OnGameStateChanged;
-        SceneManager.sceneLoaded -= OnSceneChanged;
+        gameOverMenu.SetActive(true);
+        gameOverMenu.GetComponent<GameOverMenu>().PlayerWon(player);
     }
 }
