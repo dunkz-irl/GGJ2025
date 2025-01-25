@@ -155,7 +155,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.20772165, y: -0.10481379, z: 0.012901574}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6553071235375410952}
@@ -178,6 +178,34 @@ MonoBehaviour:
   growRate: 0.5
   floatRate: 0.001
   startingGravityScale: 0.001
+  projectilePrefab: {fileID: 3964923256099241435, guid: 8e689fa607552544d9b58c2c14147b9e, type: 3}
+  projectileSpeedCoeff: 50
+  projectileChargeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -0.79613584
+      outSlope: -0.79613584
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9966736
+      value: 0.20651245
+      inSlope: -0.79613584
+      outSlope: -0.79613584
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  projectileStrength: 5
+  projectileGravity: 0
   impulseMagnitude: 2
   chargeIncrement: 1
   sizeChargeCoeff: 0.5
