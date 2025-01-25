@@ -6,6 +6,9 @@ public class WinTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameManager.Instance.PlayerWon(collision.gameObject);
+        if (GameManager.Instance.currentGameState == GameManager.GameState.Running)
+        {
+            GameManager.Instance.PlayerWon(collision.gameObject);
+        }
     }
 }

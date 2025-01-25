@@ -1,6 +1,7 @@
 using System;
 using System.Net;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
@@ -47,14 +48,27 @@ void Start()
     void FollowPlayers()
     {
         // Camera position
-        float ySum = 0f;
+        float yMin = float.MaxValue;
+        float yMax = float.MinValue;
 
         foreach (GameObject player in Players)
         {
-            ySum += player.transform.position.y;
+            if (player.transform.position.y < yMin)
+            {
+                yMin = player.transform.position.y;
+            }
+            if (player.transform.position.y > yMax)
+            {
+                yMax = player.transform.position.y;
+            }
         }
 
-        float midpoint = ySum / Players.Length;
+        float yDiff = yMax - yMin;
+
+        // Zoom out to keep all players in view
+        Camera.main.orthographicSize = Math.Clamp(yDiff, 6f, 10f);
+
+        float midpoint = Math.Max(2f, yMin + yDiff / 2);
 
         transform.SetPositionAndRotation(new Vector3(transform.position.x, midpoint, transform.position.z), transform.rotation);
 
@@ -65,12 +79,14 @@ void Start()
 
     void ZoomInOnWinningPlayer()
     {
-        Vector3 newPosition = Vector3.Lerp(transform.position, winningPlayer.transform.position, Time.deltaTime * 2.0f);
-        transform.SetPositionAndRotation(new Vector3(newPosition.x, newPosition.y, transform.position.z), transform.rotation);
+        Vector3 newPosition = winningPlayer.transform.position;
+        newPosition.z = transform.position.z;
+        transform.position = newPosition;
     }
 
     void PlayerWon(GameObject player)
     {
         winningPlayer = player;
+        Camera.main.orthographicSize = 6f;
     }
 }

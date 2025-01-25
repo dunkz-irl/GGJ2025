@@ -101,6 +101,11 @@ public class Player : MonoBehaviour
 
     private void HandleInput()
     {
+        if (GameManager.Instance.currentGameState != GameManager.GameState.Running)
+        {
+            return;
+        }
+
         // Hold
         if (Input.GetKeyDown(actionKey))
         {

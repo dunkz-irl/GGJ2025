@@ -8,19 +8,16 @@ public class UIManager : Singleton<UIManager>
 {
     public static UnityEngine.Events.UnityAction buttonClicked;
 
-    private GameObject backgroundPanel;
-    private GameObject pauseMenu;
-    private GameObject optionsMenu;
-    private GameObject gameOverMenu;
+    [SerializeField] private GameObject backgroundPanel;
+    [SerializeField] private GameObject mainMenu;
+    [SerializeField] private GameObject gameOverMenu;
+
     private GameManager gameManager;
 
     public enum MyButton
     {
         play,
-        options,
         quit,
-        pause,
-        resume,
         mainMenu,
         back,
         restart,
@@ -48,10 +45,6 @@ public class UIManager : Singleton<UIManager>
 
     private void Start()
     {
-        //backgroundPanel = transform.Find("Canvas/BackgroundPanel").gameObject;
-        //pauseMenu = transform.Find("Canvas/SafeAreaPanel/PauseMenu").gameObject;
-        //optionsMenu = transform.Find("Canvas/SafeAreaPanel/OptionsMenu").gameObject;
-        gameOverMenu = transform.Find("Canvas/GameOverMenu").gameObject;
         gameManager = GameManager.Instance;
     }
 
@@ -59,19 +52,13 @@ public class UIManager : Singleton<UIManager>
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (optionsMenu.activeInHierarchy)
-                OnButtonClicked(MyButton.back);
-            else if (pauseMenu.activeInHierarchy)
-                OnButtonClicked(MyButton.resume);
-            else if (gameManager.currentGameState == GameManager.GameState.Running)
-                OnButtonClicked(MyButton.pause);
+
         }
     }
 
     private void OnGameStateChanged(GameManager.GameState newGameState)
     {
-        //pauseMenu.SetActive(newGameState == GameManager.GameState.Paused);
-        //backgroundPanel.SetActive(newGameState == GameManager.GameState.Paused);
+
     }
 
     private void OnSceneChanged(Scene newScene, LoadSceneMode unused)
