@@ -39,7 +39,11 @@ public class Player : MonoBehaviour
     private float chargeTime = 0f;
 
     private ArrowDrawer arrowDrawer;
-    private Rigidbody2D rb;            
+    private Rigidbody2D rb;
+
+    [SerializeField]
+    private Color playerColor = Color.white;
+    public Color GetPlayerColor { get => playerColor; }
 
     // Start is called once before the first execution of Update
     void Start()

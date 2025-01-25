@@ -1,4 +1,5 @@
 using TMPro;
+using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,7 +16,9 @@ public class GameOverMenu : MonoBehaviour
     public void PlayerWon(GameObject player)
     {
         playerWonText.text = player.name.ToString() + " Won!";
-        playerWonText.color = player.GetComponent<SpriteRenderer>().color;
+
+        Player playerScript = player.GetComponent<Player>();
+        playerWonText.color = playerScript.GetPlayerColor;
     }
 
     private void OnDisable()
