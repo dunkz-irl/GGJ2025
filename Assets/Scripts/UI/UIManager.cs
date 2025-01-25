@@ -63,7 +63,8 @@ public class UIManager : Singleton<UIManager>
 
     private void OnSceneChanged(Scene newScene, LoadSceneMode unused)
     {
-
+        mainMenu.SetActive(newScene == SceneManager.GetSceneByName("MainMenu"));
+        gameOverMenu.SetActive(false);
     }
 
     public void OnButtonClicked(MyButton button)
@@ -76,7 +77,6 @@ public class UIManager : Singleton<UIManager>
                 StartCoroutine(gameManager.StartGame());
                 break;
             case MyButton.restart:
-                gameOverMenu.SetActive(false);
                 StartCoroutine(gameManager.StartGame());
                 break;
         }
