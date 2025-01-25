@@ -6765,18 +6765,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RisingFloor
       objectReference: {fileID: 0}
-    - target: {fileID: 2477314004169205814, guid: 68ea0b7c88ef45e419cce1a6a47f279b, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2477314004169205814, guid: 68ea0b7c88ef45e419cce1a6a47f279b, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2477314004169205814, guid: 68ea0b7c88ef45e419cce1a6a47f279b, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7003824423964556877, guid: 68ea0b7c88ef45e419cce1a6a47f279b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
