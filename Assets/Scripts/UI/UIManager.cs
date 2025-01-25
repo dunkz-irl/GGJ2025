@@ -79,6 +79,9 @@ public class UIManager : Singleton<UIManager>
             case MyButton.restart:
                 StartCoroutine(gameManager.StartGame());
                 break;
+            case MyButton.mainMenu:
+                gameManager.ReturnToMainMenu();
+                break;
         }
     }
 

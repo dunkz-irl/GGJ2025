@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -9,7 +10,7 @@ public class GameManager : Singleton<GameManager>
 
     public enum GameState
     {
-        //Pregame,
+        Pregame,
         Running,
         Paused,
         Postgame
@@ -17,10 +18,30 @@ public class GameManager : Singleton<GameManager>
 
     public GameState currentGameState { get; private set; }
 
+    public int numPlayers;
+
     protected override void Awake()
     {
         base.Awake();
         DontDestroyOnLoad(gameObject);
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneChanged;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneChanged;
+    }
+
+    private void OnSceneChanged(Scene newScene, LoadSceneMode unused)
+    {
+        if (newScene == SceneManager.GetSceneByName("Main"))
+        {
+            ChangeGameState(GameState.Running);
+        }
     }
 
     private void ChangeGameState(GameState newGameState)
@@ -43,7 +64,7 @@ public class GameManager : Singleton<GameManager>
 
     public void ReturnToMainMenu()
     {
-        //ChangeGameState(GameState.Pregame);
+        ChangeGameState(GameState.Pregame);
         LoadScene("MainMenu");
     }
 

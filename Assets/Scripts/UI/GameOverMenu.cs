@@ -5,11 +5,13 @@ using UnityEngine.UI;
 public class GameOverMenu : MonoBehaviour
 {
     [SerializeField] private Button rematchButton;
+    [SerializeField] private Button mainMenuButton;
     [SerializeField] private TMP_Text playerWonText;
 
     private void OnEnable()
     {
         rematchButton.onClick.AddListener(() => UIManager.Instance.OnButtonClicked(UIManager.MyButton.restart));
+        mainMenuButton.onClick.AddListener(() => UIManager.Instance.OnButtonClicked(UIManager.MyButton.mainMenu));
     }
 
     public void PlayerWon(GameObject player)
@@ -23,5 +25,6 @@ public class GameOverMenu : MonoBehaviour
     private void OnDisable()
     {
         rematchButton.onClick.RemoveAllListeners();
+        mainMenuButton.onClick.RemoveAllListeners();
     }
 }
