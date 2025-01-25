@@ -11,12 +11,32 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float floatRate = .1f; 
     [SerializeField]
-    private float impulseMagnitude = 5f; 
-    [SerializeField]
-    private float startingGravityScale = 0.001f; 
+    private float startingGravityScale = 0.001f;
 
+    [Header("Charge Dash Variables")]
+    [SerializeField]
+    private float impulseMagnitude = 5f;
+    [SerializeField]
+    private float chargeIncrement = 1f;
+    [SerializeField]
+    private float sizeChargeCoeff = 1f;
+    [SerializeField]
+    private AnimationCurve sizeChargeCurve = new AnimationCurve();
+    [SerializeField]
+    private float spinChargeCoeff = 50f;
+    [SerializeField]
+    private AnimationCurve spinChargeCurve = new AnimationCurve();
+    [SerializeField]
+    private float impulseChargeCoeff = 1f;
+    [Space(8)]
+
+    private float spinRateCharge = 0f;
+    private float impulseMagnitudeCharge = 0f;
+
+    private bool isCharging = false;
     private float angle = 0;  
-    private float size = 1;       
+    private float size = 1;
+    private float chargeTime = 0f;
 
     private ArrowDrawer arrowDrawer;
     private Rigidbody2D rb;            
@@ -34,12 +54,14 @@ public class Player : MonoBehaviour
     void Update()
     {
         // make control arrow spin
-        angle += spinRate * Time.deltaTime;
-        // make player grow
-        size += growRate * Time.deltaTime;
+        angle += (spinRate + spinRateCharge) * Time.deltaTime;
+        // make player grow, when not charging
+        if (!isCharging)
+        {
+            size += growRate * Time.deltaTime;
+        }
         // make player float
         rb.gravityScale -= floatRate * Time.deltaTime;
-
 
         // update size
         transform.localScale = Vector3.one * size;
@@ -52,11 +74,43 @@ public class Player : MonoBehaviour
 
     private void HandleInput()
     {
-        // Check if the action key is pressed
+        // Hold
         if (Input.GetKeyDown(actionKey))
         {
-            SetSpeedInDirection(angle);
+            isCharging = true;
         }
+        if (Input.GetKey(actionKey))
+        {
+            if (isCharging)
+            {
+                chargeTime += Time.deltaTime;
+
+                size -= chargeIncrement * Time.deltaTime * sizeChargeCoeff * sizeChargeCurve.Evaluate(chargeTime);
+                size = Mathf.Max(size, 1f); // size shouldn't go below 1
+
+                if (size > 1)
+                {
+                    spinRateCharge += chargeIncrement * Time.deltaTime * spinChargeCoeff * spinChargeCurve.Evaluate(chargeTime);
+                    impulseMagnitudeCharge += chargeIncrement * Time.deltaTime * impulseChargeCoeff;
+                }
+            }
+        }
+        if (Input.GetKeyUp(actionKey))
+        {
+            SetSpeedInDirection(angle);
+
+            // Reset charge variables
+            isCharging = false;
+            chargeTime = 0f;
+            impulseMagnitudeCharge = 0f;
+            spinRateCharge = 0f;
+        }
+
+        // Check if the action key is pressed
+        //if (Input.GetKeyDown(actionKey))
+        //{
+        //    SetSpeedInDirection(angle);
+        //}
         if (Input.GetKeyDown("p"))
         {
             shrink(1);
@@ -85,7 +139,7 @@ public class Player : MonoBehaviour
         Vector2 direction = new Vector2(Mathf.Cos(radians), Mathf.Sin(radians));
 
         // Set the Rigidbody2D velocity in the calculated direction
-        rb.linearVelocity = direction * impulseMagnitude;
+        rb.linearVelocity = direction * (impulseMagnitude + impulseMagnitudeCharge);
     }
 
     // allow others to shrink this players bubble by specified amount
