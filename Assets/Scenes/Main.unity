@@ -1699,10 +1699,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 6746401108439566432, guid: afc09dbb32473584a95467d7f2b2bd8d, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 30278681bef6cea4ab91e45618bf1869, type: 2}
     - target: {fileID: 7305862804425058992, guid: afc09dbb32473584a95467d7f2b2bd8d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.29
@@ -8673,10 +8669,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 6746401108439566432, guid: afc09dbb32473584a95467d7f2b2bd8d, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 30278681bef6cea4ab91e45618bf1869, type: 2}
     - target: {fileID: 7305862804425058992, guid: afc09dbb32473584a95467d7f2b2bd8d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.2077217

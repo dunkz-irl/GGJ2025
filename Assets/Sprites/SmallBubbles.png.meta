@@ -171,6 +171,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -759,7 +772,33 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SmallBubbles_0: 669791635190676784
+      SmallBubbles_1: -1856001513398664170
+      SmallBubbles_10: 4246433908383881839
+      SmallBubbles_11: 594368544434050174
+      SmallBubbles_12: -8956164338845924435
+      SmallBubbles_13: 324325507908444937
+      SmallBubbles_14: 6223558505661879644
+      SmallBubbles_15: -5987945781246739523
+      SmallBubbles_16: 8119698077306238912
+      SmallBubbles_17: -2632658354720447273
+      SmallBubbles_18: -6418740171184741744
+      SmallBubbles_19: 6334898736193934041
+      SmallBubbles_2: 831761326686523532
+      SmallBubbles_20: 1190426641026692085
+      SmallBubbles_21: 492652187825750766
+      SmallBubbles_22: 2744116862301365112
+      SmallBubbles_23: 1164952271839276981
+      SmallBubbles_24: 4348809554740765465
+      SmallBubbles_25: 5923543002351055778
+      SmallBubbles_3: -5997732600519012389
+      SmallBubbles_4: -5371263549104998450
+      SmallBubbles_5: 1238472847496963866
+      SmallBubbles_6: 2874767061783837639
+      SmallBubbles_7: -4074283250111004341
+      SmallBubbles_8: 3504516069214878290
+      SmallBubbles_9: 8529562038129976757
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
