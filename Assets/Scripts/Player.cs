@@ -14,6 +14,18 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float startingGravityScale = 0.001f;
 
+    [Header("Projectile Variables")]
+    [SerializeField]
+    private Bullet projectilePrefab;
+    [SerializeField]
+    private float projectileSpeedCoeff = 5;
+    [SerializeField]
+    private AnimationCurve projectileChargeCurve = new AnimationCurve();
+    [SerializeField]
+    private float projectileStrength = 5;
+    [SerializeField]
+    private bool projectileGravity = false;
+
     [Header("Charge Dash Variables")]
     [SerializeField]
     private float impulseMagnitude = 5f;
@@ -31,6 +43,7 @@ public class Player : MonoBehaviour
     private float impulseChargeCoeff = 1f;
     [Space(8)]
 
+    private float projectileCharge = 0f;
     private float spinRateCharge = 0f;
     private float impulseMagnitudeCharge = 0f;
     
@@ -106,18 +119,21 @@ public class Player : MonoBehaviour
                 {
                     spinRateCharge += chargeIncrement * Time.deltaTime * spinChargeCoeff * spinChargeCurve.Evaluate(chargeTime);
                     impulseMagnitudeCharge += chargeIncrement * Time.deltaTime * impulseChargeCoeff;
+                    projectileCharge += chargeIncrement * Time.deltaTime * projectileSpeedCoeff * projectileChargeCurve.Evaluate(chargeTime);
                 }
             }
         }
         if (Input.GetKeyUp(actionKey))
         {
             SetSpeedInDirection(angle);
+            FireProjectile();
 
             // Reset charge variables
             isCharging = false;
             chargeTime = 0f;
             impulseMagnitudeCharge = 0f;
             spinRateCharge = 0f;
+            projectileCharge = 0f;
         }
 
         // Check if the action key is pressed
@@ -155,6 +171,18 @@ public class Player : MonoBehaviour
 
         // Set the Rigidbody2D velocity in the calculated direction
         rb.linearVelocity = direction * (impulseMagnitude + impulseMagnitudeCharge);
+    }
+
+    private void FireProjectile()
+    {
+        float projectileDistance = transform.localScale.x/2 + 1f;
+        Vector3 startPos = this.transform.position + 
+                            new Vector3(Mathf.Cos(angle * Mathf.Deg2Rad) * projectileDistance, Mathf.Sin(angle * Mathf.Deg2Rad) * projectileDistance, 0f);
+        
+        Bullet projectile = Instantiate(projectilePrefab, startPos, Quaternion.identity);
+        // setting owner should prevent the player from hurting themselves
+        projectile.SetOwner(this);
+        projectile.Fire(projectileStrength, projectileCharge, angle, projectileGravity);
     }
 
     // allow others to shrink this players bubble by specified amount
