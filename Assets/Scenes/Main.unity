@@ -1793,6 +1793,18 @@ PrefabInstance:
       propertyPath: actionKey
       value: x
       objectReference: {fileID: 0}
+    - target: {fileID: 2685384320883450877, guid: afc09dbb32473584a95467d7f2b2bd8d, type: 3}
+      propertyPath: playerColor.b
+      value: 0.055560827
+      objectReference: {fileID: 0}
+    - target: {fileID: 2685384320883450877, guid: afc09dbb32473584a95467d7f2b2bd8d, type: 3}
+      propertyPath: playerColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2685384320883450877, guid: afc09dbb32473584a95467d7f2b2bd8d, type: 3}
+      propertyPath: playerColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4162239575324076383, guid: afc09dbb32473584a95467d7f2b2bd8d, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -7943,6 +7955,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2685384320883450877, guid: afc09dbb32473584a95467d7f2b2bd8d, type: 3}
+      propertyPath: playerColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2685384320883450877, guid: afc09dbb32473584a95467d7f2b2bd8d, type: 3}
+      propertyPath: playerColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2685384320883450877, guid: afc09dbb32473584a95467d7f2b2bd8d, type: 3}
+      propertyPath: playerColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4162239575324076383, guid: afc09dbb32473584a95467d7f2b2bd8d, type: 3}
       propertyPath: m_Color.b
       value: 0
