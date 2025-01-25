@@ -107,7 +107,7 @@ MonoBehaviour:
   spinRate: 100
   growRate: 0.1
   floatRate: 0.001
-  impulseMagnitude: 1
+  impulseMagnitude: 2
   startingGravityScale: 0.001
 --- !u!114 &4844972531581820080
 MonoBehaviour:

@@ -3,7 +3,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField]
-    private string actionKey = "space";
+    public string actionKey = "space";
     [SerializeField]
     private float spinRate = 1;   
     [SerializeField]
