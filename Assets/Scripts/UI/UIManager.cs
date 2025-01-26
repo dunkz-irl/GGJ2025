@@ -52,7 +52,10 @@ public class UIManager : Singleton<UIManager>
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-
+            if (GameManager.Instance.currentGameState == GameManager.GameState.Running)
+            {
+                GameManager.Instance.ReturnToMainMenu();
+            }
         }
     }
 
