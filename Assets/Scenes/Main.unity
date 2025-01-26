@@ -7850,6 +7850,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1851223416292712896, guid: 61eaaea4696f8e54e9cdf059c4c59649, type: 3}
+      propertyPath: actionKey
+      value: a
+      objectReference: {fileID: 0}
     - target: {fileID: 2066348023558711179, guid: 61eaaea4696f8e54e9cdf059c4c59649, type: 3}
       propertyPath: m_Controller
       value: 
@@ -7877,6 +7881,14 @@ PrefabInstance:
     - target: {fileID: 2622551592558999350, guid: 61eaaea4696f8e54e9cdf059c4c59649, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2763392866409422829, guid: 61eaaea4696f8e54e9cdf059c4c59649, type: 3}
+      propertyPath: actionKey
+      value: p
+      objectReference: {fileID: 0}
+    - target: {fileID: 2796512807577746347, guid: 61eaaea4696f8e54e9cdf059c4c59649, type: 3}
+      propertyPath: actionKey
+      value: k
       objectReference: {fileID: 0}
     - target: {fileID: 3473394585589537652, guid: 61eaaea4696f8e54e9cdf059c4c59649, type: 3}
       propertyPath: m_Sprite
