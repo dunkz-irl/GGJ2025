@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -61,6 +62,9 @@ public class Player : MonoBehaviour
     private ArrowDrawer arrowDrawer;
     private Rigidbody2D rb;
 
+    private ContactFilter2D filter = new ContactFilter2D().NoFilter();
+    private List<Collider2D> colliders = new List<Collider2D>();
+
     [SerializeField]
     Animation spriteAnimation;
 
@@ -85,7 +89,10 @@ public class Player : MonoBehaviour
         // make player grow, when not charging
         if (!isCharging)
         {
-            size += growRate * Time.deltaTime;
+            if (CheckCollidingGeometry() < 2)
+            {
+                size += growRate * Time.deltaTime;
+            }
         }
         // make player float
         rb.gravityScale -= floatRate * Time.deltaTime;
@@ -99,6 +106,28 @@ public class Player : MonoBehaviour
         HandleInput();
 
         // Counter rotate child sprite renderer
+    }
+
+    private int CheckCollidingGeometry()
+    {
+        GetComponent<Collider2D>().Overlap(filter, colliders);
+
+        int numCollidingGeometry = 0;
+
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.gameObject.CompareTag("StaticGeometry"))
+            {
+                numCollidingGeometry++;
+                // Early out as we only care if it's less than 2
+                if (numCollidingGeometry >= 2)
+                {
+                    return numCollidingGeometry;
+                }
+            }
+        }
+
+        return numCollidingGeometry;
     }
 
     private void HandleInput()
@@ -232,4 +261,3 @@ public class Player : MonoBehaviour
         spriteAnimation.Stop("A_SpriteFlash");
     }
 }
-
