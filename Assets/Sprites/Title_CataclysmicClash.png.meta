@@ -1,0 +1,817 @@
+fileFormatVersion: 2
+guid: 3f7bf9997bfb95744b87589150cf5013
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5408320701782339055
+    second: Title_CataclysmicClash_0
+  - first:
+      213: -9138620318804772324
+    second: Title_CataclysmicClash_1
+  - first:
+      213: -6361448934850047892
+    second: Title_CataclysmicClash_2
+  - first:
+      213: -2957516387177169889
+    second: Title_CataclysmicClash_3
+  - first:
+      213: -1183393140732571677
+    second: Title_CataclysmicClash_4
+  - first:
+      213: 4268973289223138560
+    second: Title_CataclysmicClash_5
+  - first:
+      213: -7853402555346743093
+    second: Title_CataclysmicClash_6
+  - first:
+      213: -2169445372624281216
+    second: Title_CataclysmicClash_7
+  - first:
+      213: -6565264110495938918
+    second: Title_CataclysmicClash_8
+  - first:
+      213: 8353417899547352541
+    second: Title_CataclysmicClash_9
+  - first:
+      213: -5536695165292980242
+    second: Title_CataclysmicClash_10
+  - first:
+      213: 1878444791323466136
+    second: Title_CataclysmicClash_11
+  - first:
+      213: 4756499472293931685
+    second: Title_CataclysmicClash_12
+  - first:
+      213: 8552788845406696847
+    second: Title_CataclysmicClash_13
+  - first:
+      213: 3307481349786555927
+    second: Title_CataclysmicClash_14
+  - first:
+      213: -1664052132431638882
+    second: Title_CataclysmicClash_15
+  - first:
+      213: -2980115189932551521
+    second: Title_CataclysmicClash_16
+  - first:
+      213: 4660174471473738202
+    second: Title_CataclysmicClash_17
+  - first:
+      213: -1872234677550213816
+    second: Title_CataclysmicClash_18
+  - first:
+      213: 964460868789969470
+    second: Title_CataclysmicClash_19
+  - first:
+      213: 7159140831630551330
+    second: Title_CataclysmicClash_20
+  - first:
+      213: -8626538480733093407
+    second: Title_CataclysmicClash_21
+  - first:
+      213: 4749661668280870601
+    second: Title_CataclysmicClash_22
+  - first:
+      213: -6192375274324190850
+    second: Title_CataclysmicClash_23
+  - first:
+      213: -7393339156947079488
+    second: Title_CataclysmicClash_24
+  - first:
+      213: 8489747971569698290
+    second: Title_CataclysmicClash_25
+  - first:
+      213: -889311577628733110
+    second: Title_CataclysmicClash_26
+  - first:
+      213: -8005609672278954586
+    second: Title_CataclysmicClash_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 135
+        width: 153
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1125fdae9f8c1f4b0800000000000000
+      internalID: -5408320701782339055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_1
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 263
+        width: 74
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1a79701d391d2180800000000000000
+      internalID: -9138620318804772324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_2
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 263
+        width: 66
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c60d97de5e797b7a0800000000000000
+      internalID: -6361448934850047892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_3
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 263
+        width: 66
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1c78e4f38ac4f6d0800000000000000
+      internalID: -2957516387177169889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_4
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 263
+        width: 50
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ef4009553eb39fe0800000000000000
+      internalID: -1183393140732571677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_5
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 263
+        width: 74
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00da6cba6907e3b30800000000000000
+      internalID: 4268973289223138560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_6
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 159
+        width: 74
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc0996a2cfb130390800000000000000
+      internalID: -7853402555346743093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_7
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 159
+        width: 58
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0816d158de494e1e0800000000000000
+      internalID: -2169445372624281216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_8
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 159
+        width: 58
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a96c445631f73e4a0800000000000000
+      internalID: -6565264110495938918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_9
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 159
+        width: 50
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dddd8e2425d4de370800000000000000
+      internalID: 8353417899547352541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_10
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 159
+        width: 74
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee7d613f415b923b0800000000000000
+      internalID: -5536695165292980242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_11
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 79
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8999405d593911a10800000000000000
+      internalID: 1878444791323466136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_12
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 79
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aaa96ca11b720240800000000000000
+      internalID: 4756499472293931685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_13
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 79
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f85b369e32c91b670800000000000000
+      internalID: 8552788845406696847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_14
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 79
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 716d14b83c886ed20800000000000000
+      internalID: 3307481349786555927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_15
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 79
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9e4eaee66918e8e0800000000000000
+      internalID: -1664052132431638882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_16
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 79
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f92135a260184a6d0800000000000000
+      internalID: -2980115189932551521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_17
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 63
+        width: 34
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad1398bbdf34ca040800000000000000
+      internalID: 4660174471473738202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_18
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 79
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8459374fa7c7406e0800000000000000
+      internalID: -1872234677550213816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_19
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 79
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e32adfbdc04726d00800000000000000
+      internalID: 964460868789969470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_20
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 119
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2296556d7a06a5360800000000000000
+      internalID: 7159140831630551330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_21
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 79
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e18aa605f0684880800000000000000
+      internalID: -8626538480733093407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_22
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 79
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c6ab2d5f103ae140800000000000000
+      internalID: 4749661668280870601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_23
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 23
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e799ef12f73401aa0800000000000000
+      internalID: -6192375274324190850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_24
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 23
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ceee265535956990800000000000000
+      internalID: -7393339156947079488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_25
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 23
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f5410eacc4a1d570800000000000000
+      internalID: 8489747971569698290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_26
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 23
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a411cc8f4d788a3f0800000000000000
+      internalID: -889311577628733110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title_CataclysmicClash_27
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 23
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ada1692b6c56e090800000000000000
+      internalID: -8005609672278954586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
