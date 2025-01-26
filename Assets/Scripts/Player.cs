@@ -6,7 +6,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     public string actionKey = "space";
     [SerializeField]
-    private float spinRate = 1;   
+    private float spinRate = 1;
+
+    private float spinDirection = 1f;
     [SerializeField]
     private float growRate = 1; 
     [SerializeField]
@@ -79,7 +81,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         // make control arrow spin
-        angle += (spinRate + spinRateCharge) * Time.deltaTime;
+        angle += (spinRate * spinDirection + spinRateCharge) * Time.deltaTime;
         // make player grow, when not charging
         if (!isCharging)
         {
@@ -122,7 +124,7 @@ public class Player : MonoBehaviour
 
                 if (size > 1)
                 {
-                    spinRateCharge += chargeIncrement * Time.deltaTime * spinChargeCoeff * spinChargeCurve.Evaluate(chargeTime);
+                    spinRateCharge += chargeIncrement * spinDirection * Time.deltaTime * spinChargeCoeff * spinChargeCurve.Evaluate(chargeTime);
                     impulseMagnitudeCharge += chargeIncrement * Time.deltaTime * impulseChargeCoeff;
                     projectileCharge += chargeIncrement * Time.deltaTime * projectileSpeedCoeff * projectileChargeCurve.Evaluate(chargeTime);
                 }
@@ -146,11 +148,11 @@ public class Player : MonoBehaviour
         //{
         //    SetSpeedInDirection(angle);
         //}
-        if (Input.GetKeyDown("p"))
-        {
-            //shrink(1);
-            Damage();
-        }
+        //if (Input.GetKeyDown("p"))
+        //{
+        //    //shrink(1);
+        //    Damage();
+        //}
     }
 
     // Function to apply an impulse in the direction of the current angle
@@ -203,7 +205,7 @@ public class Player : MonoBehaviour
         rb.gravityScale += floatRate * amount;
     }
 
-    public void Damage()
+    public void Damage(float strength)
     {
         if (isDamaged)
         {
@@ -211,10 +213,10 @@ public class Player : MonoBehaviour
         }
 
         isDamaged = true;
-        shrink(5f);
+        shrink(strength);
 
         // Change arrow spinning direction
-        spinRate *= -1f;
+        spinDirection *= -1f;
 
         spriteAnimation.Play("A_SpriteDamageWiggle");
         spriteAnimation.PlayQueued("A_SpriteFlash");

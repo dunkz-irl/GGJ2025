@@ -35,7 +35,7 @@ public class Bullet : MonoBehaviour
         Player player = collision.gameObject.GetComponent<Player>();
         if (player != null && player != owner)
         {
-            player.shrink(strength);
+            player.Damage(strength);
         }
 
         Destroy(this.gameObject);
