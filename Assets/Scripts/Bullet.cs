@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -6,7 +7,10 @@ public class Bullet : MonoBehaviour
     private Player owner;
     private float strength;
 
-    private Rigidbody2D rb; 
+    [SerializeField] private Sprite[] sprites;
+
+    private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
 
     bool fire = false;
     Vector2 velocity;
@@ -14,7 +18,10 @@ public class Bullet : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();  
+        rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
+        spriteRenderer.sprite = sprites[UnityEngine.Random.Range(0, sprites.Length)];
     }
 
     // Update is called once per frame

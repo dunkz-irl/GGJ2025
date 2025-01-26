@@ -30,8 +30,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.9371696, y: -0.21701169, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -79,12 +79,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 105169053199506356, guid: 1ae169afecfdda04481edcf0bf1293a2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 85a7a697b45abbe4389c82ddd4245caa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.08, y: 2.41}
+  m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -165,3 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bb4d62df030b514e9b1add40df0e28f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 85a7a697b45abbe4389c82ddd4245caa, type: 3}
+  - {fileID: 21300000, guid: 02db7ea815f636c479e46efa449fe3e8, type: 3}
+  - {fileID: 21300000, guid: d6757cf780d19b24092590d957c3478e, type: 3}
