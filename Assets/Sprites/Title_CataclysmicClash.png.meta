@@ -127,7 +127,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -166,6 +166,19 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -800,7 +813,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -809,7 +822,35 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Title_CataclysmicClash_0: -5408320701782339055
+      Title_CataclysmicClash_1: -9138620318804772324
+      Title_CataclysmicClash_10: -5536695165292980242
+      Title_CataclysmicClash_11: 1878444791323466136
+      Title_CataclysmicClash_12: 4756499472293931685
+      Title_CataclysmicClash_13: 8552788845406696847
+      Title_CataclysmicClash_14: 3307481349786555927
+      Title_CataclysmicClash_15: -1664052132431638882
+      Title_CataclysmicClash_16: -2980115189932551521
+      Title_CataclysmicClash_17: 4660174471473738202
+      Title_CataclysmicClash_18: -1872234677550213816
+      Title_CataclysmicClash_19: 964460868789969470
+      Title_CataclysmicClash_2: -6361448934850047892
+      Title_CataclysmicClash_20: 7159140831630551330
+      Title_CataclysmicClash_21: -8626538480733093407
+      Title_CataclysmicClash_22: 4749661668280870601
+      Title_CataclysmicClash_23: -6192375274324190850
+      Title_CataclysmicClash_24: -7393339156947079488
+      Title_CataclysmicClash_25: 8489747971569698290
+      Title_CataclysmicClash_26: -889311577628733110
+      Title_CataclysmicClash_27: -8005609672278954586
+      Title_CataclysmicClash_3: -2957516387177169889
+      Title_CataclysmicClash_4: -1183393140732571677
+      Title_CataclysmicClash_5: 4268973289223138560
+      Title_CataclysmicClash_6: -7853402555346743093
+      Title_CataclysmicClash_7: -2169445372624281216
+      Title_CataclysmicClash_8: -6565264110495938918
+      Title_CataclysmicClash_9: 8353417899547352541
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

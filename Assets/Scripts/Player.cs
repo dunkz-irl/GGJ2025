@@ -5,6 +5,11 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField]
+    public bool IsMainMenuPlayer = false;
+    [SerializeField]
+    public Vector2 MainMenuStartImpulse;
+
+    [SerializeField]
     public string actionKey = "space";
     [SerializeField]
     private float spinRate = 1;
@@ -79,6 +84,11 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();  
 
         rb.gravityScale = startingGravityScale;
+
+        if (IsMainMenuPlayer)
+        {
+            rb.linearVelocity = MainMenuStartImpulse;
+        }
     }
 
     // Update is called once per frame
@@ -96,6 +106,11 @@ public class Player : MonoBehaviour
         }
         // make player float
         rb.gravityScale -= floatRate * Time.deltaTime;
+
+        if (IsMainMenuPlayer)
+        {
+            return;
+        }
 
         // update size
         transform.localScale = Vector3.one * size;

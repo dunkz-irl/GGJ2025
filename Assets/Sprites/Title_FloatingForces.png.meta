@@ -121,7 +121,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -160,6 +160,19 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -750,7 +763,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -759,7 +772,33 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Title_FloatingForces_0: 8611564044413053030
+      Title_FloatingForces_1: -4869349459067701439
+      Title_FloatingForces_10: -6755631902541435633
+      Title_FloatingForces_11: -3912524148308216534
+      Title_FloatingForces_12: 2306949854282408475
+      Title_FloatingForces_13: -899099914408899415
+      Title_FloatingForces_14: -3628784552210913048
+      Title_FloatingForces_15: -2539789694710890880
+      Title_FloatingForces_16: 6296857724948244140
+      Title_FloatingForces_17: 4258172888297085908
+      Title_FloatingForces_18: 4324319858037107666
+      Title_FloatingForces_19: 6925568963946838101
+      Title_FloatingForces_2: 4753820243940249648
+      Title_FloatingForces_20: -5001065194069738626
+      Title_FloatingForces_21: -836252554016798312
+      Title_FloatingForces_22: 6845073447632099197
+      Title_FloatingForces_23: 7539096458730172361
+      Title_FloatingForces_24: 715001849365976125
+      Title_FloatingForces_25: 8458356389046978229
+      Title_FloatingForces_3: 3719901611414074829
+      Title_FloatingForces_4: 7768027155856051454
+      Title_FloatingForces_5: -8478028315598136878
+      Title_FloatingForces_6: 667724788162636010
+      Title_FloatingForces_7: 8161657838829512734
+      Title_FloatingForces_8: -1092235831951318365
+      Title_FloatingForces_9: -3308976376782356979
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
